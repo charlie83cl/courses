@@ -1,0 +1,40 @@
+{% extends "course_app/base.html" %}
+
+{% block title %} Courses {% endblock %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <h5>Courses</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered table-strip">
+            <thead>
+                <tr class="table-dark">
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Date Added</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in course %}
+                    <tr class="align-middle">
+                        <td>{{course.name}}</td>
+                        <td>{{course.desc}}</td>
+                        <td>{{course.created_at}}</td>
+                        <td><a href="#">remove</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+    <div class="div">
+        <h1> ESTAMOS MEJORANDO </h1>
+    </div>
+
+
+{% endblock %}
+
